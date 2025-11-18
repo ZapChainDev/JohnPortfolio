@@ -253,7 +253,7 @@ export default function Hero() {
                     whileTap={{ scale: 0.98 }}
                     className="px-8 py-4 rounded-3xl bg-white/80 text-text-dark font-anime font-semibold text-lg soft-shadow hover:bg-white transition-all"
                   >
-                    Let's Talk
+                    Let&apos;s Talk
                   </motion.a>
                 </motion.div>
               </motion.div>

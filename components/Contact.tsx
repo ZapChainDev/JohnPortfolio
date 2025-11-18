@@ -87,13 +87,11 @@ export default function Contact() {
           <motion.h2
             className="font-anime text-5xl md:text-7xl mb-6 font-bold gradient-text"
             style={{
-              textShadow: "2px 2px 0px #a78bfa, 4px 4px 0px #5eead4",
-            }}
-          >
-            LET'S TALK!
-          </motion.h2>
-
-          {/* Speech bubble intro */}
+            textShadow: "2px 2px 0px #a78bfa, 4px 4px 0px #5eead4",
+          }}
+        >
+          LET&apos;S TALK!
+        </motion.h2>          {/* Speech bubble intro */}
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -102,7 +100,7 @@ export default function Contact() {
             className="speech-bubble inline-block font-anime text-lg mb-8"
           >
             <FontAwesomeIcon icon={faEnvelope} className="text-warm-yellow" />{" "}
-            Ready to start your next project? Let's connect!{" "}
+            Ready to start your next project? Let&apos;s connect!{" "}
             <FontAwesomeIcon icon={faEnvelope} className="text-warm-yellow" />
           </motion.div>
         </motion.div>
@@ -183,7 +181,7 @@ export default function Contact() {
                 className="p-4 rounded-2xl bg-green-500/20 border-2 border-green-500 text-green-700 font-anime text-center"
               >
                 <FontAwesomeIcon icon={faCheck} className="mr-2" />
-                Message sent successfully! I'll get back to you soon.
+                Message sent successfully! I&apos;ll get back to you soon.
               </motion.div>
             )}
 
