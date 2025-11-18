@@ -18,7 +18,7 @@ export default function Hero() {
   const [text, setText] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const fullText =
-    "Hi, I'm John Mark — Full Stack Dev, Automation Specialist & Technical VA.";
+    "Hi, I&apos;m John Mark — Full Stack Dev, Automation Specialist & Technical VA.";
 
   useEffect(() => {
     let index = 0;

@@ -87,11 +87,12 @@ export default function Contact() {
           <motion.h2
             className="font-anime text-5xl md:text-7xl mb-6 font-bold gradient-text"
             style={{
-            textShadow: "2px 2px 0px #a78bfa, 4px 4px 0px #5eead4",
-          }}
-        >
-          LET&apos;S TALK!
-        </motion.h2>          {/* Speech bubble intro */}
+              textShadow: "2px 2px 0px #a78bfa, 4px 4px 0px #5eead4",
+            }}
+          >
+            LET&apos;S TALK!
+          </motion.h2>{" "}
+          {/* Speech bubble intro */}
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
