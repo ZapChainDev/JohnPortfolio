@@ -101,13 +101,13 @@ export default function Skills() {
         </motion.h2>
 
         {/* Carousel Container */}
-        <div className="relative px-12">
+        <div className="relative px-4 sm:px-8 md:px-12">
           {/* Previous Button */}
           <motion.button
             onClick={prevSlide}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-gradient-to-br from-warm-yellow to-soft-orange text-white flex items-center justify-center shadow-lg"
+            className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-warm-yellow to-soft-orange text-white flex items-center justify-center shadow-lg text-sm sm:text-base"
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </motion.button>
@@ -120,9 +120,9 @@ export default function Skills() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               {skillCategories.map((skill, index) => (
-                <div key={skill.title} className="min-w-full px-2">
+                <div key={skill.title} className="min-w-full px-1 sm:px-2">
                   <MangaPanel variant="glass">
-                    <div className="p-8 relative overflow-hidden">
+                    <div className="p-4 sm:p-6 md:p-8 relative overflow-hidden">
                       {/* Animated background glow */}
                       <motion.div
                         className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-10`}
@@ -131,7 +131,7 @@ export default function Skills() {
                       />
 
                       {/* Icon */}
-                      <div className="flex items-start gap-6 mb-6 relative z-10">
+                      <div className="flex items-start gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6 relative z-10">
                         <motion.div
                           animate={{ rotate: [0, 360] }}
                           transition={{
@@ -139,38 +139,38 @@ export default function Skills() {
                             repeat: Infinity,
                             ease: "linear",
                           }}
-                          className={`flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br ${skill.color} flex items-center justify-center shadow-lg`}
+                          className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br ${skill.color} flex items-center justify-center shadow-lg`}
                         >
                           <FontAwesomeIcon
                             icon={skill.icon}
-                            className="text-white text-3xl"
+                            className="text-white text-xl sm:text-2xl md:text-3xl"
                           />
                         </motion.div>
 
-                        <div className="flex-1">
-                          <h3 className="font-anime text-3xl font-bold gradient-text mb-2">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-anime text-xl sm:text-2xl md:text-3xl font-bold gradient-text mb-1 sm:mb-2">
                             {skill.title}
                           </h3>
-                          <p className="font-anime text-lg text-text-gray/80">
+                          <p className="font-anime text-sm sm:text-base md:text-lg text-text-gray/80">
                             {skill.description}
                           </p>
                         </div>
                       </div>
 
                       {/* Details list */}
-                      <div className="space-y-3 relative z-10 mt-6">
+                      <div className="space-y-2 sm:space-y-3 relative z-10 mt-4 sm:mt-6">
                         {skill.details.map((detail, idx) => (
                           <motion.div
                             key={detail}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="flex items-center gap-3"
+                            className="flex items-center gap-2 sm:gap-3"
                           >
                             <div
-                              className={`w-2 h-2 rounded-full bg-gradient-to-r ${skill.color}`}
+                              className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r ${skill.color} flex-shrink-0`}
                             />
-                            <span className="font-anime text-base text-text-gray">
+                            <span className="font-anime text-sm sm:text-base text-text-gray">
                               {detail}
                             </span>
                           </motion.div>
@@ -188,7 +188,7 @@ export default function Skills() {
             onClick={nextSlide}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-gradient-to-br from-warm-yellow to-soft-orange text-white flex items-center justify-center shadow-lg"
+            className="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-warm-yellow to-soft-orange text-white flex items-center justify-center shadow-lg text-sm sm:text-base"
           >
             <FontAwesomeIcon icon={faChevronRight} />
           </motion.button>
