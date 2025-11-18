@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-cream via-warm-beige to-soft-peach text-text-dark;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(255, 217, 61, 0.15),
+      0 2px 8px rgba(255, 184, 77, 0.1);
+  }
+
+  /* Soft shadow for cards */
+  .soft-shadow {
+    box-shadow: 0 10px 40px rgba(255, 184, 77, 0.15),
+      0 4px 12px rgba(255, 217, 61, 0.1);
+  }
+
+  /* Warm glow effect */
+  .warm-glow {
+    box-shadow: 0 0 20px rgba(255, 217, 61, 0.4),
+      0 0 40px rgba(255, 200, 87, 0.2);
+  }
+
+  /* Speech bubble anime style */
+  .speech-bubble {
+    position: relative;
+    background: white;
+    color: #2d2d2d;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(255, 184, 77, 0.2);
+  }
+
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #ffd93d 0%, #ffb84d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Dotted pattern background */
+  .dot-pattern {
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 217, 61, 0.15) 1px,
+      transparent 1px
+    );
+    background-size: 20px 20px;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f1e8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffd93d, #ffb84d);
+  border-radius: 10px;
+  border: 2px solid #f5f1e8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffb84d, #ffc857);
+}
+
+/* Selection styling */
+::selection {
+  background: #ffd93d;
+  color: #2d2d2d;
+}
