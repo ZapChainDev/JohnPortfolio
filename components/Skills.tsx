@@ -12,6 +12,9 @@ import {
   faFire,
   faChevronLeft,
   faChevronRight,
+  faBullseye,
+  faStore,
+  faPaintBrush,
 } from "@fortawesome/free-solid-svg-icons";
 
 const skillCategories = [
@@ -50,6 +53,27 @@ const skillCategories = [
     description: "Development Assistants",
     details: ["Replit", "Bolt", "GitHub Copilot"],
   },
+  {
+    title: "Lead Generation",
+    icon: faBullseye,
+    color: "from-anime-gold to-warm-yellow",
+    description: "Lead Gen Strategy",
+    details: ["Landing Pages", "Conversion Funnels", "Email Capture"],
+  },
+  {
+    title: "Shopify",
+    icon: faStore,
+    color: "from-warm-yellow to-soft-orange",
+    description: "E-Commerce Development",
+    details: ["Store Setup", "Theme Customization", "App Integration"],
+  },
+  {
+    title: "WordPress Static",
+    icon: faPaintBrush,
+    color: "from-soft-orange to-anime-gold",
+    description: "Custom Theme Development",
+    details: ["Static Themes", "Custom Design", "Performance Optimized"],
+  },
 ];
 
 export default function Skills() {
@@ -74,7 +98,7 @@ export default function Skills() {
   const prevSlide = () => {
     setIsAutoPlaying(false);
     setCurrentIndex(
-      (prev) => (prev - 1 + skillCategories.length) % skillCategories.length
+      (prev) => (prev - 1 + skillCategories.length) % skillCategories.length,
     );
   };
 

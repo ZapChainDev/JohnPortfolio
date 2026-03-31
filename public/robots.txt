@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://johnmarkdev.vercel.app/sitemap.xml
