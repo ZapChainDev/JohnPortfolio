@@ -125,10 +125,10 @@ export default function ClientWork() {
                   </div>
 
                   {/* Right: Info */}
-                  <div className="flex-1 flex flex-col justify-between">
+                  <div className="flex-1 flex flex-col justify-between items-center lg:items-start text-center lg:text-left">
                     {/* Client badge */}
-                    <div>
-                      <div className="flex items-center gap-3 mb-4">
+                    <div className="w-full">
+                      <div className="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-3 mb-4">
                         <div
                           className={`w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-2xl bg-gradient-to-br ${project.colorFrom} ${project.colorTo} flex items-center justify-center text-white font-anime font-bold text-base sm:text-lg`}
                         >
@@ -153,7 +153,7 @@ export default function ClientWork() {
                       </p>
 
                       {/* Highlights */}
-                      <ul className="mb-5 space-y-1">
+                      <ul className="mb-5 space-y-1 text-left">
                         {project.highlights.map((item) => (
                           <li
                             key={item}
@@ -169,7 +169,7 @@ export default function ClientWork() {
                       </ul>
 
                       {/* Tech tags */}
-                      <div className="flex flex-wrap gap-2 mb-6">
+                      <div className="flex flex-wrap gap-2 mb-6 justify-center lg:justify-start">
                         {project.services.map((service) => (
                           <span
                             key={service}
