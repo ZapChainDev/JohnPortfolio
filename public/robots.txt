@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://johnmarkdev.vercel.app/sitemap.xml
+Sitemap: https://www.johnmarkpapelirin.live/sitemap.xml

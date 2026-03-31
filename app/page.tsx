@@ -10,7 +10,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://johnmarkdev.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.johnmarkpapelirin.live";
 
 const jsonLd = {
   "@context": "https://schema.org",
