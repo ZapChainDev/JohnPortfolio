@@ -18,11 +18,12 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
-      name: "John Mark",
+      name: "John Mark Papelirin",
+      alternateName: "John Mark",
       url: siteUrl,
       jobTitle: "Full Stack Developer",
       description:
-        "Full Stack Developer specializing in Next.js, React, WordPress custom themes, Shopify, and Lead Generation.",
+        "John Mark Papelirin is a Full Stack Developer specializing in Next.js, React, WordPress custom themes, Shopify, and Lead Generation.",
       knowsAbout: [
         "Next.js",
         "React",
@@ -41,9 +42,9 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "John Mark — Full Stack Developer",
+      name: "John Mark Papelirin — Full Stack Developer",
       description:
-        "Portfolio of John Mark — Full Stack Developer & Web Specialist.",
+        "Portfolio of John Mark Papelirin — Full Stack Developer & Web Specialist.",
       author: { "@id": `${siteUrl}/#person` },
     },
   ],
