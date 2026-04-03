@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import ClientWork from "@/components/ClientWork";
 import GameDev from "@/components/GameDev";
+import WorkFlow from "@/components/WorkFlow";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -64,6 +65,7 @@ export default function Home() {
       <Projects />
       <ClientWork />
       <GameDev />
+      <WorkFlow />
       <Experience />
       <Contact />
       <Footer />

@@ -67,49 +67,58 @@ export default function GameDev() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               <MangaPanel variant="glass">
-                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+                <div className="flex flex-col lg:flex-row gap-5 lg:gap-8">
                   {/* Left: Preview */}
                   <div className="w-full lg:w-1/2 flex-shrink-0">
                     <div className="rounded-2xl overflow-hidden border-2 border-warm-yellow/30 shadow-xl">
                       {/* Browser bar */}
-                      <div className="bg-text-dark px-3 py-2 flex items-center gap-2">
-                        <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
-                        <div className="flex-1 mx-2 bg-white/10 rounded-full px-2 py-1 text-xs text-white/70 font-mono truncate">
+                      <div className="bg-text-dark px-2 py-1.5 sm:px-3 sm:py-2 flex items-center gap-1.5 sm:gap-2">
+                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-400" />
+                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-yellow-400" />
+                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-400" />
+                        <div className="flex-1 mx-1.5 sm:mx-2 bg-white/10 rounded-full px-2 py-0.5 text-[10px] sm:text-xs text-white/70 font-mono truncate">
                           {exp.liveUrl}
                         </div>
                       </div>
-                      {/* Iframe */}
-                      <div className="relative w-full h-48 sm:h-64 lg:h-80">
+                      {/* Iframe — renders at 2× then scales to 50% so desktop layout fits */}
+                      <div
+                        className="relative w-full overflow-hidden"
+                        style={{ height: "200px" }}
+                      >
                         <iframe
                           src={exp.liveUrl}
                           title={exp.title}
-                          className="absolute inset-0 w-full h-full border-0"
+                          className="absolute top-0 left-0 border-0"
                           loading="lazy"
                           sandbox="allow-scripts allow-same-origin"
-                          style={{ pointerEvents: "none" }}
+                          style={{
+                            width: "200%",
+                            height: "400px",
+                            transform: "scale(0.5)",
+                            transformOrigin: "0 0",
+                            pointerEvents: "none",
+                          }}
                         />
                       </div>
                     </div>
                   </div>
 
                   {/* Right: Info */}
-                  <div className="flex-1 flex flex-col justify-between items-center lg:items-start text-center lg:text-left">
+                  <div className="flex-1 flex flex-col justify-between">
                     <div className="w-full">
                       {/* Icon + title */}
-                      <div className="flex flex-col sm:flex-row items-center sm:items-start lg:items-center gap-3 mb-4">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 rounded-2xl bg-gradient-to-br from-warm-yellow to-soft-orange flex items-center justify-center">
+                      <div className="flex flex-row items-center gap-3 mb-3 sm:mb-4">
+                        <div className="w-11 h-11 sm:w-14 sm:h-14 flex-shrink-0 rounded-2xl bg-gradient-to-br from-warm-yellow to-soft-orange flex items-center justify-center">
                           <FontAwesomeIcon
                             icon={faCube}
-                            className="text-white text-xl sm:text-2xl"
+                            className="text-white text-lg sm:text-2xl"
                           />
                         </div>
                         <div className="min-w-0">
-                          <h3 className="font-anime text-xl sm:text-2xl font-bold text-text-dark leading-tight">
+                          <h3 className="font-anime text-lg sm:text-2xl font-bold text-text-dark leading-tight">
                             {exp.title}
                           </h3>
-                          <span className="flex items-center gap-1 text-soft-orange text-sm font-anime">
+                          <span className="flex items-center gap-1 text-soft-orange text-xs sm:text-sm font-anime">
                             <FontAwesomeIcon
                               icon={faGamepad}
                               className="text-xs"
@@ -119,12 +128,12 @@ export default function GameDev() {
                         </div>
                       </div>
 
-                      <p className="text-text-gray text-sm sm:text-base leading-relaxed mb-5">
+                      <p className="text-text-gray text-sm leading-relaxed mb-4">
                         {exp.description}
                       </p>
 
                       {/* Highlights */}
-                      <ul className="mb-5 space-y-1 text-left">
+                      <ul className="mb-4 space-y-1">
                         {exp.highlights.map((item) => (
                           <li
                             key={item}
@@ -140,11 +149,11 @@ export default function GameDev() {
                       </ul>
 
                       {/* Tech tags */}
-                      <div className="flex flex-wrap gap-2 mb-6 justify-center lg:justify-start">
+                      <div className="flex flex-wrap gap-2 mb-5">
                         {exp.tech.map((t) => (
                           <span
                             key={t}
-                            className="px-4 py-2 bg-warm-yellow/20 rounded-full text-text-dark text-sm font-anime font-medium"
+                            className="px-3 py-1.5 bg-warm-yellow/20 rounded-full text-text-dark text-xs sm:text-sm font-anime font-medium"
                           >
                             {t}
                           </span>
@@ -159,7 +168,7 @@ export default function GameDev() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.98 }}
-                      className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-3xl bg-gradient-to-r from-warm-yellow to-soft-orange text-white font-anime font-semibold soft-shadow hover:shadow-xl transition-all w-full sm:w-fit justify-center sm:justify-start"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-3xl bg-gradient-to-r from-warm-yellow to-soft-orange text-white font-anime font-semibold soft-shadow hover:shadow-xl transition-all w-full sm:w-fit"
                     >
                       <FontAwesomeIcon icon={faExternalLinkAlt} />
                       Play Live
