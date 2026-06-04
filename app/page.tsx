@@ -11,7 +11,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.johnmarkpapelirin.live";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://johnmarkpapelirin.live";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -20,7 +20,12 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
       name: "John Mark Papelirin",
-      alternateName: "John Mark",
+      alternateName: [
+        "John Mark",
+        "John Mark Dote Papelirin",
+        "John Mark Dote",
+        "Dote Papelirin",
+      ],
       url: siteUrl,
       jobTitle: "Full Stack Developer",
       description:
@@ -37,7 +42,11 @@ const jsonLd = {
         "Three.js",
         "Stripe",
       ],
-      sameAs: [],
+      sameAs: [
+        "https://www.linkedin.com/in/john-mark-papelirin-124085253/",
+        "https://github.com/ZapChainDev",
+        "https://www.facebook.com/johnmark.papiliren.3/",
+      ],
     },
     {
       "@type": "WebSite",
@@ -47,6 +56,15 @@ const jsonLd = {
       description:
         "Portfolio of John Mark Papelirin — Full Stack Developer & Web Specialist.",
       author: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profilepage`,
+      url: siteUrl,
+      name: "John Mark Dote Papelirin — Full Stack Developer Portfolio",
+      description:
+        "Portfolio and profile of John Mark Dote Papelirin, Full Stack Developer specializing in Next.js, React, WordPress, Shopify, and Lead Generation.",
+      mainEntity: { "@id": `${siteUrl}/#person` },
     },
   ],
 };

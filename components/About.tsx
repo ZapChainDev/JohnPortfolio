@@ -94,6 +94,9 @@ export default function About() {
           <h2 className="font-anime text-5xl md:text-6xl font-bold gradient-text mb-4">
             About Me
           </h2>
+          <p className="font-anime text-lg font-semibold text-text-gray/80 mb-2">
+            John Mark Dote Papelirin
+          </p>
           <p className="font-anime text-xl text-text-gray max-w-2xl mx-auto">
             My journey from curious student to passionate developer
           </p>

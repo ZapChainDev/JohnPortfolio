@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.johnmarkpapelirin.live";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://johnmarkpapelirin.live";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

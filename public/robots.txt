@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.johnmarkpapelirin.live/sitemap.xml
+Sitemap: https://johnmarkpapelirin.live/sitemap.xml

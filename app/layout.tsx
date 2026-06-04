@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.johnmarkpapelirin.live";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://johnmarkpapelirin.live";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -11,9 +11,14 @@ export const metadata: Metadata = {
     template: "%s | John Mark Papelirin",
   },
   description:
-    "John Mark Papelirin is a Full Stack Developer specializing in Next.js, React, WordPress custom themes, Shopify, and Lead Generation. Building fast, modern, and conversion-focused websites.",
+    "John Mark Dote Papelirin is a Full Stack Developer specializing in Next.js, React, WordPress custom themes, Shopify, and Lead Generation. Building fast, modern, and conversion-focused websites.",
   keywords: [
     "John Mark Papelirin",
+    "John Mark Dote Papelirin",
+    "John Mark Dote",
+    "Dote Papelirin",
+    "John Mark Dote Papelirin developer",
+    "John Mark Dote Papelirin portfolio",
     "John Mark",
     "Papelirin",
     "John Mark Papelirin portfolio",
@@ -47,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "John Mark Papelirin — Full Stack Developer",
     title: "John Mark Papelirin | Full Stack Developer & Web Specialist",
     description:
-      "John Mark Papelirin — Full Stack Developer specializing in Next.js, React, WordPress custom themes, Shopify, and Lead Generation. Let's build something great.",
+      "John Mark Dote Papelirin — Full Stack Developer specializing in Next.js, React, WordPress custom themes, Shopify, and Lead Generation. Let's build something great.",
     images: [
       {
         url: "/og-image.png",
@@ -61,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "John Mark Papelirin | Full Stack Developer & Web Specialist",
     description:
-      "John Mark Papelirin — Full Stack Developer specializing in Next.js, React, WordPress, Shopify, and Lead Generation.",
+      "John Mark Dote Papelirin — Full Stack Developer specializing in Next.js, React, WordPress, Shopify, and Lead Generation.",
     images: ["/og-image.png"],
   },
   robots: {
