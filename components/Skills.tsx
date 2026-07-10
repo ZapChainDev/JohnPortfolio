@@ -15,6 +15,8 @@ import {
   faBullseye,
   faStore,
   faPaintBrush,
+  faBullhorn,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 
 const skillCategories = [
@@ -73,6 +75,20 @@ const skillCategories = [
     color: "from-soft-orange to-anime-gold",
     description: "Custom Theme Development",
     details: ["Static Themes", "Custom Design", "Performance Optimized"],
+  },
+  {
+    title: "Social Media Management",
+    icon: faBullhorn,
+    color: "from-anime-gold to-soft-orange",
+    description: "Brand Growth & Engagement",
+    details: ["Content Strategy", "Audience Growth", "Analytics & Insights"],
+  },
+  {
+    title: "TikTok Ads Creation",
+    icon: faVideo,
+    color: "from-warm-yellow to-anime-gold",
+    description: "Short-Form Video Ads",
+    details: ["Ad Scripting", "Video Editing", "Performance Campaigns"],
   },
 ];
 

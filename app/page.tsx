@@ -38,6 +38,8 @@ const jsonLd = {
         "WordPress",
         "Shopify",
         "Lead Generation",
+        "Social Media Management",
+        "TikTok Ads Creation",
         "Firebase",
         "Three.js",
         "Stripe",

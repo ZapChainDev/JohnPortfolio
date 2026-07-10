@@ -7,9 +7,25 @@ import {
   faBriefcase,
   faSearch,
   faCode,
+  faBullseye,
 } from "@fortawesome/free-solid-svg-icons";
 
 const experiences = [
+  {
+    role: "Lead Generation Specialist",
+    company: "Beyond Lighting Florida • Client: Chris Rico",
+    period: "Freelance",
+    responsibilities: [
+      "Researched and identified qualified residential and commercial leads across Florida.",
+      "Built targeted prospect lists using Google Maps, online directories, and social media.",
+      "Verified contact information including phone numbers, emails, and business details.",
+      "Conducted market research to identify high-potential areas for lighting services.",
+      "Organized and maintained lead lists in spreadsheets for outreach.",
+      "Supported client's marketing and sales efforts with accurate, high-quality leads.",
+    ],
+    color: "anime-gold",
+    icon: faBullseye,
+  },
   {
     role: "Web Developer & Automation",
     company: "CBL Publish • North Carolina, US",

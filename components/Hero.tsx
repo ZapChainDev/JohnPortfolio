@@ -224,7 +224,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 3 }}
-                  className="text-lg md:text-xl text-text-gray font-anime mb-8"
+                  className="text-lg md:text-xl text-text-gray font-anime mb-6"
                 >
                   Building beautiful web experiences with clean code{" "}
                   <FontAwesomeIcon
@@ -232,6 +232,28 @@ export default function Hero() {
                     className="text-warm-yellow"
                   />
                 </motion.p>
+
+                {/* Service Tags */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 3.1 }}
+                  className="flex flex-wrap gap-2 mb-8"
+                >
+                  {[
+                    { label: "🎯 Lead Gen", href: "#skills" },
+                    { label: "📱 Social Media Management", href: "#skills" },
+                    { label: "🎬 TikTok Ads Creation", href: "#skills" },
+                  ].map((tag) => (
+                    <a
+                      key={tag.label}
+                      href={tag.href}
+                      className="px-4 py-1.5 rounded-full bg-gradient-to-r from-warm-yellow/20 to-soft-orange/20 border border-warm-yellow/40 text-text-dark font-anime text-sm font-semibold hover:from-warm-yellow/40 hover:to-soft-orange/40 transition-all"
+                    >
+                      {tag.label}
+                    </a>
+                  ))}
+                </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
