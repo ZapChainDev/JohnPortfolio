@@ -26,7 +26,7 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
-    null
+    null,
   );
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -101,7 +101,7 @@ export default function Contact() {
             className="speech-bubble inline-block font-anime text-lg mb-8"
           >
             <FontAwesomeIcon icon={faEnvelope} className="text-warm-yellow" />{" "}
-            Ready to start your next project? Let&apos;s connect!{" "}
+            Ready to grow your business? Let&apos;s build something that works.{" "}
             <FontAwesomeIcon icon={faEnvelope} className="text-warm-yellow" />
           </motion.div>
         </motion.div>

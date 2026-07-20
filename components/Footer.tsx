@@ -25,10 +25,10 @@ export default function Footer() {
               <FontAwesomeIcon icon={faUser} /> About Me
             </h3>
             <div className="font-anime text-sm text-dark-gray/80 space-y-1">
-              <p>● Full Stack Developer</p>
-              <p>● Technical VA</p>
-              <p>● Automation Specialist</p>
-              <p>● Problem Solver</p>
+              <p>● Growth Operations Specialist</p>
+              <p>● Web Operations</p>
+              <p>● Lead Gen &amp; Outreach</p>
+              <p>● Marketing Operations</p>
             </div>
           </motion.div>
 
@@ -41,13 +41,13 @@ export default function Footer() {
             className="space-y-3"
           >
             <h3 className="font-anime font-bold text-xl text-soft-orange mb-3">
-              <FontAwesomeIcon icon={faBolt} /> Tech Stack
+              <FontAwesomeIcon icon={faBolt} /> Services
             </h3>
             <div className="font-anime text-sm text-dark-gray/80 space-y-1">
-              <p>● React.js & Next.js</p>
-              <p>● Node.js & Express</p>
-              <p>● TypeScript</p>
-              <p>● Tailwind CSS</p>
+              <p>● Next.js &amp; WordPress</p>
+              <p>● Shopify &amp; Stripe</p>
+              <p>● Lead Generation</p>
+              <p>● Social Media &amp; Ads</p>
             </div>
           </motion.div>
 

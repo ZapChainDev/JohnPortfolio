@@ -19,7 +19,7 @@ export default function Hero() {
   const [searchQuery, setSearchQuery] = useState("");
   // eslint-disable-next-line react/no-unescaped-entities
   const fullText =
-    "Hi, I'm John Mark — Full Stack Dev, Automation Specialist & Technical VA.";
+    "Hi, I'm John — Growth Operations Specialist for US Small Businesses & Agencies.";
 
   useEffect(() => {
     let index = 0;
@@ -226,7 +226,8 @@ export default function Hero() {
                   transition={{ delay: 3 }}
                   className="text-lg md:text-xl text-text-gray font-anime mb-6"
                 >
-                  Building beautiful web experiences with clean code{" "}
+                  I bridge web development and marketing to drive measurable
+                  growth — faster pipelines, better systems, real results.{" "}
                   <FontAwesomeIcon
                     icon={faLightbulb}
                     className="text-warm-yellow"
@@ -241,9 +242,9 @@ export default function Hero() {
                   className="flex flex-wrap gap-2 mb-8"
                 >
                   {[
-                    { label: "🎯 Lead Gen", href: "#skills" },
-                    { label: "📱 Social Media Management", href: "#skills" },
-                    { label: "🎬 TikTok Ads Creation", href: "#skills" },
+                    { label: "⚙️ Web Operations", href: "#skills" },
+                    { label: "🎯 Lead Gen & Outreach", href: "#skills" },
+                    { label: "📣 Marketing Operations", href: "#skills" },
                   ].map((tag) => (
                     <a
                       key={tag.label}
@@ -267,7 +268,7 @@ export default function Hero() {
                     whileTap={{ scale: 0.98 }}
                     className="px-8 py-4 rounded-3xl bg-gradient-to-r from-warm-yellow to-soft-orange text-white font-anime font-semibold text-lg soft-shadow hover:shadow-xl transition-all"
                   >
-                    View Projects
+                    See Results
                   </motion.a>
 
                   <motion.a
@@ -299,7 +300,7 @@ export default function Hero() {
                 >
                   <Image
                     src="/heropic/Heropic.png"
-                    alt="John Mark - Full Stack Developer"
+                    alt="John Mark — Growth Operations Specialist"
                     width={500}
                     height={500}
                     priority

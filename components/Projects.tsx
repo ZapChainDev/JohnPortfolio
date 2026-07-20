@@ -8,19 +8,24 @@ import {
   faTruck,
   faComments,
   faHammer,
+  faChartLine,
 } from "@fortawesome/free-solid-svg-icons";
 
 const projects = [
   {
     title: "SharingEdge",
-    description: "GPT-powered idea evaluator with Stripe payment integration",
+    description:
+      "GPT-powered SaaS idea evaluator — built to validate concepts and monetize user engagement from day one with live Stripe payments.",
+    impact: "Full SaaS with AI-powered flows and live payment processing",
     tech: ["Next.js", "OpenAI", "Stripe", "PostgreSQL"],
     link: "https://sharingedge.com/",
     icon: faLightbulb,
   },
   {
     title: "YouTubeTruckers",
-    description: "Interactive voting system with YouTube API integration",
+    description:
+      "Audience engagement platform with YouTube API integration — drove repeat community interaction through a custom voting and ranking system.",
+    impact: "Increased repeat visits via live API-connected voting features",
     tech: ["WordPress", "YouTube API", "Custom Plugins"],
     link: "https://youtubetruckers.com/",
     icon: faTruck,
@@ -28,14 +33,18 @@ const projects = [
   {
     title: "Best Carpet Installers Near Me",
     description:
-      "Local service directory with search and booking functionality",
+      "Local SEO-optimized directory site that converts organic search traffic into qualified service leads for carpet installation businesses.",
+    impact: "Generates local service leads with zero paid ad spend",
     tech: ["WordPress", "SEO", "Local Business"],
     link: "https://bestcarpetinstallersnearme.com/",
     icon: faHammer,
   },
   {
     title: "Cross-Cultural Chat",
-    description: "Real-time chat application with Firebase backend (Ongoing)",
+    description:
+      "Real-time Firebase-backed chat application for international community connection — secure Google auth and instant messaging.",
+    impact:
+      "Scalable real-time infrastructure ready for global user onboarding",
     tech: ["Node.js", "Firebase", "Real-time DB", "Authentication"],
     link: "#",
     icon: faComments,
@@ -51,14 +60,19 @@ export default function Projects() {
       <div className="absolute inset-0 dot-pattern opacity-30" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-anime text-5xl md:text-7xl mb-12 text-center font-bold gradient-text"
+          className="text-center mb-12"
         >
-          Featured Projects
-        </motion.h2>
+          <motion.h2 className="font-anime text-5xl md:text-7xl mb-4 font-bold gradient-text">
+            Featured Projects
+          </motion.h2>
+          <p className="font-anime text-lg text-text-gray max-w-xl mx-auto">
+            Real builds. Real outcomes. Not just code — results.
+          </p>
+        </motion.div>
 
         <div className="grid md:grid-cols-1 gap-8">
           {projects.map((project, index) => (
@@ -90,6 +104,17 @@ export default function Projects() {
                     <p className="text-text-gray mb-4 leading-relaxed">
                       {project.description}
                     </p>
+
+                    {/* Business impact callout */}
+                    <div className="flex items-start gap-2 mb-4 px-4 py-3 rounded-2xl bg-warm-yellow/10 border border-warm-yellow/30">
+                      <FontAwesomeIcon
+                        icon={faChartLine}
+                        className="text-warm-yellow mt-0.5 flex-shrink-0"
+                      />
+                      <p className="font-anime text-sm text-text-dark font-semibold">
+                        {project.impact}
+                      </p>
+                    </div>
 
                     {/* Tech stack */}
                     <div className="flex flex-wrap gap-2 mb-6">

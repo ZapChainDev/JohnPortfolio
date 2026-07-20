@@ -16,48 +16,48 @@ export default function About() {
   const journey = [
     {
       icon: faGraduationCap,
-      title: "Education",
+      title: "The Foundation",
       description:
-        "Computer Engineering student with a passion for creating innovative solutions through code.",
+        "Computer Engineering background gives me the technical depth to build what most marketers can only describe — and understand what’s actually possible at the code level.",
       color: "from-warm-yellow to-soft-orange",
       stats: "BS Computer Engineering",
-      highlight: "Problem Solver",
+      highlight: "Tech-First",
     },
     {
       icon: faLightbulb,
-      title: "Discovery",
+      title: "The Shift",
       description:
-        "Discovered the magic of web development and fell in love with building beautiful, functional applications.",
+        "Code alone doesn’t grow businesses. I combined full-stack development with marketing strategy to become a single operator who handles both sides of the growth equation.",
       color: "from-soft-orange to-anime-gold",
-      stats: "2+ Years Learning",
-      highlight: "Web Enthusiast",
+      stats: "Tech + Marketing",
+      highlight: "Growth Focus",
     },
     {
       icon: faCode,
-      title: "Skills",
+      title: "The Stack",
       description:
-        "Mastered modern technologies including React, Next.js, TypeScript, Node.js, and Express.",
+        "Next.js, WordPress, and Shopify for web. Lead pipelines, social media, and ad creation for acquisition. Everything a US small business or agency needs to grow — in one operator.",
       color: "from-anime-gold to-warm-yellow",
-      stats: "Full Stack",
-      highlight: "Modern Tech",
+      stats: "Full-Stack + GTM",
+      highlight: "Full-Funnel",
     },
     {
       icon: faBriefcase,
-      title: "Experience",
+      title: "The Work",
       description:
-        "Currently working as Web Developer, Tech Virtual Assistant with expertise in automation and full-stack development.",
+        "Delivered web systems, lead generation pipelines, and marketing operations for US clients — saving time, cutting overhead, and generating qualified opportunities.",
       color: "from-warm-yellow to-soft-orange",
-      stats: "1+ Year Pro",
-      highlight: "Currently Working",
+      stats: "US Clients",
+      highlight: "Results Driven",
     },
     {
       icon: faRocket,
-      title: "Goals",
+      title: "The Edge",
       description:
-        "Continuously learning and growing, ready to take on new challenges and build amazing projects.",
+        "Small businesses and agencies get an operator who handles web, leads, and marketing as one unified system — not three separate vendors billing separately.",
       color: "from-soft-orange to-anime-gold",
-      stats: "Always Growing",
-      highlight: "Future Ready",
+      stats: "One Operator",
+      highlight: "All-in-One",
     },
   ];
 
@@ -98,7 +98,8 @@ export default function About() {
             John Mark Dote Papelirin
           </p>
           <p className="font-anime text-xl text-text-gray max-w-2xl mx-auto">
-            My journey from curious student to passionate developer
+            Bridging web technology and marketing operations to drive real
+            business growth
           </p>
         </motion.div>
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import MangaPanel from "./MangaPanel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,119 +9,62 @@ import {
   faRobot,
   faCreditCard,
   faFire,
-  faChevronLeft,
-  faChevronRight,
   faBullseye,
   faStore,
   faPaintBrush,
   faBullhorn,
   faVideo,
+  faGlobe,
+  faChartLine,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
-const skillCategories = [
+const serviceGroups = [
   {
-    title: "Web Development",
+    group: "Web Operations",
     icon: faCode,
     color: "from-warm-yellow to-soft-orange",
-    description: "React, Next.js, TypeScript",
-    details: ["Responsive Design", "Modern Frameworks", "Clean Code"],
+    tagline: "Fast, conversion-ready web infrastructure",
+    skills: [
+      { name: "Next.js & React Apps", icon: faCode },
+      { name: "WordPress Custom Themes", icon: faBlog },
+      { name: "Shopify E-Commerce Stores", icon: faStore },
+      { name: "Stripe Payment Integration", icon: faCreditCard },
+      { name: "Firebase Backend & Auth", icon: faFire },
+      { name: "Zapier & CRM Automation", icon: faRobot },
+    ],
   },
   {
-    title: "WordPress",
-    icon: faBlog,
-    color: "from-soft-orange to-anime-gold",
-    description: "CMS Development",
-    details: ["Custom Themes", "Plugin Integration", "SEO Optimization"],
-  },
-  {
-    title: "Stripe Payment",
-    icon: faCreditCard,
-    color: "from-anime-gold to-warm-yellow",
-    description: "Payment Integration",
-    details: ["Secure Checkout", "Subscriptions", "Webhooks"],
-  },
-  {
-    title: "Firebase",
-    icon: faFire,
-    color: "from-warm-yellow to-soft-orange",
-    description: "Backend Services",
-    details: ["Authentication", "Real-time DB", "Cloud Functions"],
-  },
-  {
-    title: "AI Tools",
-    icon: faRobot,
-    color: "from-soft-orange to-anime-gold",
-    description: "Development Assistants",
-    details: ["Replit", "Bolt", "GitHub Copilot"],
-  },
-  {
-    title: "Lead Generation",
+    group: "Lead Gen & Outreach",
     icon: faBullseye,
-    color: "from-anime-gold to-warm-yellow",
-    description: "Lead Gen Strategy",
-    details: ["Landing Pages", "Conversion Funnels", "Email Capture"],
-  },
-  {
-    title: "Shopify",
-    icon: faStore,
-    color: "from-warm-yellow to-soft-orange",
-    description: "E-Commerce Development",
-    details: ["Store Setup", "Theme Customization", "App Integration"],
-  },
-  {
-    title: "WordPress Static",
-    icon: faPaintBrush,
     color: "from-soft-orange to-anime-gold",
-    description: "Custom Theme Development",
-    details: ["Static Themes", "Custom Design", "Performance Optimized"],
+    tagline: "Qualified pipelines for US small businesses",
+    skills: [
+      { name: "Prospect List Building", icon: faBullseye },
+      { name: "Google Maps & Directory Research", icon: faGlobe },
+      { name: "Contact Verification", icon: faCheck },
+      { name: "Landing Pages & Lead Capture", icon: faPaintBrush },
+      { name: "Conversion Funnel Setup", icon: faChartLine },
+      { name: "Outreach Campaign Support", icon: faBullhorn },
+    ],
   },
   {
-    title: "Social Media Management",
+    group: "Marketing Operations",
     icon: faBullhorn,
-    color: "from-anime-gold to-soft-orange",
-    description: "Brand Growth & Engagement",
-    details: ["Content Strategy", "Audience Growth", "Analytics & Insights"],
-  },
-  {
-    title: "TikTok Ads Creation",
-    icon: faVideo,
-    color: "from-warm-yellow to-anime-gold",
-    description: "Short-Form Video Ads",
-    details: ["Ad Scripting", "Video Editing", "Performance Campaigns"],
+    color: "from-anime-gold to-warm-yellow",
+    tagline: "Content and campaigns that build authority",
+    skills: [
+      { name: "Social Media Management", icon: faBullhorn },
+      { name: "TikTok Ads & Short-Form Video", icon: faVideo },
+      { name: "Content Strategy & Scheduling", icon: faBlog },
+      { name: "Analytics & Performance Reports", icon: faChartLine },
+      { name: "AI-Assisted Content Workflows", icon: faRobot },
+      { name: "Brand Consistency & Messaging", icon: faPaintBrush },
+    ],
   },
 ];
 
 export default function Skills() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % skillCategories.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
-  const nextSlide = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev + 1) % skillCategories.length);
-  };
-
-  const prevSlide = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex(
-      (prev) => (prev - 1 + skillCategories.length) % skillCategories.length,
-    );
-  };
-
-  const goToSlide = (index: number) => {
-    setIsAutoPlaying(false);
-    setCurrentIndex(index);
-  };
-
   return (
     <section
       id="skills"
@@ -130,123 +72,99 @@ export default function Skills() {
     >
       <div className="absolute inset-0 dot-pattern opacity-30" />
 
-      <div className="container mx-auto max-w-4xl relative z-10">
-        <motion.h2
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-anime text-5xl md:text-7xl mb-16 text-center font-bold gradient-text"
+          className="text-center mb-6"
         >
-          My Skills
-        </motion.h2>
+          <motion.h2 className="font-anime text-5xl md:text-7xl mb-4 font-bold gradient-text">
+            What I Do
+          </motion.h2>
+          <p className="font-anime text-lg text-text-gray max-w-xl mx-auto">
+            Three service areas, one operator. Built for US small businesses and
+            agencies.
+          </p>
+        </motion.div>
 
-        {/* Carousel Container */}
-        <div className="relative px-4 sm:px-8 md:px-12">
-          {/* Previous Button */}
-          <motion.button
-            onClick={prevSlide}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-warm-yellow to-soft-orange text-white flex items-center justify-center shadow-lg text-sm sm:text-base"
-          >
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </motion.button>
-
-          {/* Carousel Slides */}
-          <div className="overflow-hidden">
+        {/* 3-Pillar Grid */}
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
+          {serviceGroups.map((group, groupIndex) => (
             <motion.div
-              className="flex"
-              animate={{ x: `-${currentIndex * 100}%` }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              key={group.group}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: groupIndex * 0.15 }}
+              whileHover={{ y: -6, scale: 1.02 }}
             >
-              {skillCategories.map((skill, index) => (
-                <div key={skill.title} className="min-w-full px-1 sm:px-2">
-                  <MangaPanel variant="glass">
-                    <div className="p-4 sm:p-6 md:p-8 relative overflow-hidden">
-                      {/* Animated background glow */}
-                      <motion.div
-                        className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-10`}
-                        animate={{ opacity: [0.05, 0.15, 0.05] }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                      />
+              <MangaPanel variant="glass">
+                <div className="p-6 relative overflow-hidden h-full">
+                  {/* Background glow */}
+                  <motion.div
+                    className={`absolute inset-0 bg-gradient-to-br ${group.color} opacity-5`}
+                    animate={{ opacity: [0.04, 0.1, 0.04] }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                  />
 
-                      {/* Icon */}
-                      <div className="flex items-start gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6 relative z-10">
-                        <motion.div
-                          animate={{ rotate: [0, 360] }}
-                          transition={{
-                            duration: 20,
-                            repeat: Infinity,
-                            ease: "linear",
-                          }}
-                          className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br ${skill.color} flex items-center justify-center shadow-lg`}
+                  {/* Group header */}
+                  <div className="flex items-center gap-4 mb-2 relative z-10">
+                    <div
+                      className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${group.color} flex items-center justify-center shadow-md flex-shrink-0`}
+                    >
+                      <FontAwesomeIcon
+                        icon={group.icon}
+                        className="text-white text-2xl"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-anime text-xl font-bold gradient-text leading-tight">
+                        {group.group}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p className="font-anime text-sm text-text-gray/80 mb-5 relative z-10">
+                    {group.tagline}
+                  </p>
+
+                  {/* Divider */}
+                  <div
+                    className={`h-px bg-gradient-to-r ${group.color} opacity-30 mb-5`}
+                  />
+
+                  {/* Skills list */}
+                  <ul className="space-y-3 relative z-10">
+                    {group.skills.map((skill, skillIndex) => (
+                      <motion.li
+                        key={skill.name}
+                        initial={{ opacity: 0, x: -16 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                          delay: groupIndex * 0.15 + skillIndex * 0.06,
+                        }}
+                        className="flex items-center gap-3"
+                      >
+                        <div
+                          className={`w-6 h-6 rounded-lg bg-gradient-to-br ${group.color} flex items-center justify-center flex-shrink-0 opacity-80`}
                         >
                           <FontAwesomeIcon
                             icon={skill.icon}
-                            className="text-white text-xl sm:text-2xl md:text-3xl"
+                            className="text-white text-xs"
                           />
-                        </motion.div>
-
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-anime text-xl sm:text-2xl md:text-3xl font-bold gradient-text mb-1 sm:mb-2">
-                            {skill.title}
-                          </h3>
-                          <p className="font-anime text-sm sm:text-base md:text-lg text-text-gray/80">
-                            {skill.description}
-                          </p>
                         </div>
-                      </div>
-
-                      {/* Details list */}
-                      <div className="space-y-2 sm:space-y-3 relative z-10 mt-4 sm:mt-6">
-                        {skill.details.map((detail, idx) => (
-                          <motion.div
-                            key={detail}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="flex items-center gap-2 sm:gap-3"
-                          >
-                            <div
-                              className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r ${skill.color} flex-shrink-0`}
-                            />
-                            <span className="font-anime text-sm sm:text-base text-text-gray">
-                              {detail}
-                            </span>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-                  </MangaPanel>
+                        <span className="font-anime text-sm text-text-gray">
+                          {skill.name}
+                        </span>
+                      </motion.li>
+                    ))}
+                  </ul>
                 </div>
-              ))}
+              </MangaPanel>
             </motion.div>
-          </div>
-
-          {/* Next Button */}
-          <motion.button
-            onClick={nextSlide}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-warm-yellow to-soft-orange text-white flex items-center justify-center shadow-lg text-sm sm:text-base"
-          >
-            <FontAwesomeIcon icon={faChevronRight} />
-          </motion.button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-8">
-            {skillCategories.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? "bg-gradient-to-r from-warm-yellow to-soft-orange w-8"
-                    : "bg-gray-300 hover:bg-gray-400"
-                }`}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
